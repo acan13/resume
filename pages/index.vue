@@ -1,72 +1,40 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        resume
-      </h1>
-      <h2 class="subtitle">
-        Allan Cannon&#39;s Digital Resume
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <div class="resume-wrapper">
+        <div class="resume-header">
+            <ac-header/>
+        </div>
+        <div class="resume-tech-summary">
+            <ac-tech-summary/>
+        </div>
+        <div class="experience-summary">
+            <ac-experience/>
+        </div>
+        <div class="education-summary">
+            <ac-education/>
+        </div>
+        <div class="leadership-service-summary">
+            <ac-leadership-service/>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import HeaderVue from '~/components/Header/Header.vue';
+import TechnicalSummaryVue from '~/components/TechSummary/TechnicalSummary.vue';
+import EducationVue from '~/components/Education/Education.vue';
+import ExperienceVue from '~/components/Experience/Experience.vue';
+import LeadershipServiceVue from '~/components/LeadershipService/LeadershipService.vue';
 export default {
-  components: {
-    Logo
-  }
-}
+    components: {
+        'ac-header': HeaderVue,
+        'ac-tech-summary': TechnicalSummaryVue,
+        'ac-education': EducationVue,
+        'ac-experience': ExperienceVue,
+        'ac-leadership-service': LeadershipServiceVue,
+    },
+};
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
