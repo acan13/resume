@@ -1,10 +1,10 @@
 <template>
-    <div class="role-item-wrapper">
+    <li class="role-item-wrapper">
         <div v-if="text" class="standard-text">
             {{ text }}
         </div>
         <slot/>
-    </div>
+    </li>
 </template>
 
 <script>

@@ -15,8 +15,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
     .section-title-wrapper {
         font-size: 24px;
+        font-weight: bold;
     }
 </style>

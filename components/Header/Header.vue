@@ -26,17 +26,16 @@ export default {
     .header-wrapper {
         display: flex;
         justify-content: space-between;
-        background-color: red;
+        align-items: flex-end;
     }
 
     .main-name {
         font-size: 50px;
         font-weight: bold;
-        background-color: green;
         display: inline-block;
     }
 
     .header-contact-info {
-        background-color: aqua;
+        
     }
 </style>

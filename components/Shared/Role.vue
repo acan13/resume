@@ -3,17 +3,20 @@
         <div class="role-header">
             <ac-role-info :role-name="roleName" :location="location" :start-date="startDate" :end-date="endDate" :organization="organization"/>
         </div>
-        <div class="role-items">
+        <ul class="role-items">
             <slot/>
-        </div>
+        </ul>
+        <ac-role-divider/>
     </div>
 </template>
 
 <script>
 import RoleInfoVue from './RoleInfo.vue';
+import RoleDividerVue from './RoleDivider.vue';
 export default {
     components: {
         'ac-role-info': RoleInfoVue,
+        'ac-role-divider': RoleDividerVue,
     },
     props: {
         roleName: {

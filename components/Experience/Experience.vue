@@ -17,20 +17,6 @@
                     Implemented a knowledge base and built a tool to seamlessly integrate context-based content into a web app
                 </ac-role-item>
                 <ac-role-item>
-                    Created and delivered a presentation that grew a new territory to over $500,000 in sales over two years
-                </ac-role-item>
-                <ac-role-item>
-                    Won multiple awards, including best rookie, skills champion, and sales monster
-                </ac-role-item>
-                <ac-role-item>
-                    Developed strong communication skills through 600+ sales calls and 200+ hours on the phone
-                </ac-role-item>
-            </ac-role>
-            <ac-role role-name="Sales Engineer" location="Plano, TX" organization="Keyence Corporation of America" :start-date="keyenceStartDate" :end-date="keyenceEndDate">
-                <ac-role-item>
-                    Developed an algorithm that generated over $80,000 in sales.
-                </ac-role-item>
-                <ac-role-item>
                     Planned and executed complete rebuild of main company marketing website from scratch
                 </ac-role-item>
                 <ac-role-item>

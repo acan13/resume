@@ -1,10 +1,10 @@
 <template>
     <div class="role-info-wrapper">
-        <div class="role-info">
+        <div class="role-info role-info-header-line">
             <ac-role-name :role-name="roleName"/>
             <ac-role-dates :start-date="startDate" :end-date="endDate"/>
         </div>
-        <div class="organization-info">
+        <div class="organization-info role-info-header-line">
             <ac-organization-name :organization="organization"/>
             <ac-location :location="location"/>
         </div>
@@ -49,5 +49,8 @@ export default {
 </script>
 
 <style>
-
+    .role-info-header-line {
+        display: flex;
+        justify-content: space-between;
+    }
 </style>

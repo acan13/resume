@@ -1,6 +1,6 @@
 <template>
     <div class="role-name-wrapper">
-        {{ roleName }}
+        {{ formattedRoleName }}
     </div>
 </template>
 
@@ -12,9 +12,16 @@ export default {
             default: '',
         },
     },
+    computed: {
+        formattedRoleName () {
+            return this.roleName.toUpperCase();
+        },
+    },
 };
 </script>
 
 <style>
-
+    .role-name-wrapper {
+        font-weight: bold;
+    }
 </style>

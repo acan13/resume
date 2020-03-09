@@ -1,6 +1,8 @@
 <template>
     <div class="organization-name-wrapper">
-        {{ organization }}
+        <i>
+            {{ organization }}
+        </i>
     </div>
 </template>
 
@@ -16,5 +18,7 @@ export default {
 </script>
 
 <style>
-
+    .organization-name-wrapper {
+        font-weight: bold;
+    }
 </style>
