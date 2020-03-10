@@ -1,70 +1,78 @@
+const TYPE = {
+    LANGUAGE: 'Language',
+    FRAMEWORK: 'Framework',
+    CONCEPT: 'Concept',
+    WORLD_LANGUAGE: 'World Language',
+};
+
 class TechSummaryItem {
     constructor ({
         longName = '',
         shortName = '',
-        yearsExperience = 0,
-        experienceLevel,
-        link = '',
         type,
     }) {
         this.longName = longName;
-        this.shortName = shortName;
-        this.yearsExperience = yearsExperience;
-        this.experienceLevel = experienceLevel;
-        this.link = link;
+        this.shortName = shortName || longName;
         this.type = type;
     }
 }
 
 export default [
     new TechSummaryItem({
-        longName: "JavaScript",
-        shortName: "JavaScript",
-        yearsExperience: 3,
+        longName: 'JavaScript',
+        type: TYPE.LANGUAGE,
     }),
     new TechSummaryItem({
-        longName: "Python",
-        shortName: "Python",
-        yearsExperience: 2,
+        longName: 'Python',
+        type: TYPE.LANGUAGE,
     }),
     new TechSummaryItem({
-        longName: "Ruby",
-        shortName: "Ruby",
-        yearsExperience: 1,
+        longName: 'Ruby',
+        type: TYPE.LANGUAGE,
     }),
     new TechSummaryItem({
-        longName: "SQL",
-        shortName: "SQL",
-        yearsExperience: 1,
+        longName: 'SQL',
+        type: TYPE.LANGUAGE,
     }),
     new TechSummaryItem({
-        longName: "MSSQL",
-        shortName: "MSSQL",
-        yearsExperience: 1,
+        longName: 'HTML',
+        type: TYPE.LANGUAGE,
     }),
     new TechSummaryItem({
-        longName: "Express.js",
-        shortName: "Express.js",
-        yearsExperience: 1,
+        longName: 'CSS',
+        type: TYPE.LANGUAGE,
     }),
     new TechSummaryItem({
-        longName: "Vue.js",
-        shortName: "Vue.js",
-        yearsExperience: 1,
+        longName: 'SCSS',
+        type: TYPE.FRAMEWORK,
     }),
     new TechSummaryItem({
-        longName: "Node.js",
-        shortName: "Node.js",
-        yearsExperience: 1,
+        longName: 'Rails',
+        type: TYPE.FRAMEWORK,
     }),
     new TechSummaryItem({
-        longName: "Django",
-        shortName: "Django",
-        yearsExperience: 1,
+        longName: 'Bootstrap',
+        type: TYPE.FRAMEWORK,
     }),
     new TechSummaryItem({
-        longName: "Brazilian Portuguese",
-        shortName: "Portuguese",
-        yearsExperience: 1,
+        longName: 'Express.js',
+        type: TYPE.FRAMEWORK,
+    }),
+    new TechSummaryItem({
+        longName: 'Vue.js',
+        type: TYPE.FRAMEWORK,
+    }),
+    new TechSummaryItem({
+        longName: 'Node.js',
+        type: TYPE.FRAMEWORK,
+    }),
+    new TechSummaryItem({
+        longName: 'Django',
+        type: TYPE.FRAMEWORK,
+    }),
+    new TechSummaryItem({
+        longName: 'Brazilian Portuguese',
+        shortName: 'Portuguese',
+        type: TYPE.WORLD_LANGUAGE,
     }),
 ];
