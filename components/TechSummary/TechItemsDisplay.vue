@@ -4,31 +4,37 @@
             <span class="item-type-name">
                 LANGUAGES:
             </span>
-            <template v-for="(item, index) in languageItems">
-                {{ item.shortName }}<template v-if="index !== languageItems.length - 1">
-                    ,
-                </template>
-            </template>
+            <transition-group name="list">
+                <span v-for="(item, index) in languageItems" :key="item" class="list-item">
+                    {{ item.shortName }}<template v-if="index !== languageItems.length - 1">
+                        ,
+                    </template>
+                </span>
+            </transition-group>
         </div>
         <div class="tech-item-line">
             <span class="item-type-name">
                 FRAMEWORKS:
             </span>
-            <template v-for="(item, index) in frameworkItems">
-                {{ item.shortName }}<template v-if="index !== frameworkItems.length - 1">
-                    ,
-                </template>
-            </template>
+            <transition-group name="list">
+                <span v-for="(item, index) in frameworkItems" :key="item" class="list-item">
+                    {{ item.shortName }}<template v-if="index !== frameworkItems.length - 1">
+                        ,
+                    </template>
+                </span>
+            </transition-group>
         </div>
         <div class="tech-item-line">
             <span class="item-type-name">
                 WORLD LANGUAGES:
             </span>
-            <template v-for="(item, index) in worldLanguageItems">
-                {{ item.shortName }}<template v-if="index !== worldLanguageItems.length - 1">
-                    ,
-                </template>
-            </template>
+            <transition-group name="list">
+                <span v-for="(item, index) in worldLanguageItems" :key="item" class="list-item">
+                    {{ item.shortName }}<template v-if="index !== worldLanguageItems.length - 1">
+                        ,
+                    </template>
+                </span>
+            </transition-group>
         </div>
     </div>
 </template>
@@ -88,5 +94,17 @@ export default {
 <style>
     .item-type-name {
         font-weight: bold;
+    }
+
+    .list-item {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .list-enter-active, .list-leave-active {
+        transition: all 1s;
+    }
+    .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+        opacity: 0;
+        transform: translateY(30px);
     }
 </style>
