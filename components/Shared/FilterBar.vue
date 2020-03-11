@@ -1,7 +1,7 @@
 <template>
     <div class="filter-bar-wrapper">
         Filters:
-        <div v-for="option in options" :key="option" class="filter-option" @click="handleClick(option)">
+        <div v-for="option in options" :key="option" class="filter-option" :class="{'selected': optionHighlighted[option]}" @click="handleClick(option)">
             {{ option }}
         </div>
     </div>
@@ -35,6 +35,13 @@ export default {
             });
             return currentSelections;
         },
+        optionHighlighted () {
+            const currentSelections = {};
+            this.options.forEach((option) => {
+                currentSelections[option] = this.value.includes(option);
+            });
+            return currentSelections;
+        },
     },
     methods: {
         handleClick (option) {
@@ -59,6 +66,17 @@ export default {
     }
 
     .filter-option {
-        padding: 15px 25px;
+        margin: 12px 6px;
+        border-radius: 50px;
+        padding: 4px 15px;
+        cursor: pointer;
+    }
+
+    .filter-option:hover, .filter-option.selected:hover {
+        background-color: #d3d3d35c;
+    }
+
+    .filter-option.selected {
+        background-color: lightgray;
     }
 </style>

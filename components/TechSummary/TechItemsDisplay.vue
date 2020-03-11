@@ -5,7 +5,7 @@
                 LANGUAGES:
             </span>
             <transition-group name="list">
-                <span v-for="(item, index) in languageItems" :key="item" class="list-item">
+                <span v-for="(item, index) in languageItems" :key="item.longName" class="list-item">
                     {{ item.shortName }}<template v-if="index !== languageItems.length - 1">
                         ,
                     </template>
@@ -17,7 +17,7 @@
                 FRAMEWORKS:
             </span>
             <transition-group name="list">
-                <span v-for="(item, index) in frameworkItems" :key="item" class="list-item">
+                <span v-for="(item, index) in frameworkItems" :key="item.longName" class="list-item">
                     {{ item.shortName }}<template v-if="index !== frameworkItems.length - 1">
                         ,
                     </template>
@@ -29,7 +29,7 @@
                 WORLD LANGUAGES:
             </span>
             <transition-group name="list">
-                <span v-for="(item, index) in worldLanguageItems" :key="item" class="list-item">
+                <span v-for="(item, index) in worldLanguageItems" :key="item.longName" class="list-item">
                     {{ item.shortName }}<template v-if="index !== worldLanguageItems.length - 1">
                         ,
                     </template>

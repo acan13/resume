@@ -26,9 +26,11 @@
     .layout-wrapper {
         display: flex;
         justify-content: center;
+        padding: 10px;
     }
 
     .content-wrapper {
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1100px;
     }
 </style>
