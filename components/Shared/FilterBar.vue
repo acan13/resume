@@ -1,6 +1,6 @@
 <template>
     <div class="filter-bar-wrapper">
-        Filters:
+        <span class="filter-text">Filters:</span>
         <div v-for="option in options" :key="option" class="filter-option" :class="{'selected': optionHighlighted[option]}" @click="handleClick(option)">
             {{ option }}
         </div>
@@ -63,10 +63,17 @@ export default {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        padding-bottom: 10px;
+    }
+
+    .filter-text {
+        font-size: 16px;
+        font-weight: bold;
     }
 
     .filter-option {
-        margin: 12px 6px;
+        margin-left: 6px;
+        margin-right: 6px;
         border-radius: 50px;
         padding: 4px 15px;
         cursor: pointer;

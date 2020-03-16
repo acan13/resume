@@ -19,5 +19,6 @@ export default {
     .section-title-wrapper {
         font-size: 24px;
         font-weight: bold;
+        padding-bottom: 15px;
     }
 </style>

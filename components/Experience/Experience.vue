@@ -3,10 +3,10 @@
         <ac-section section-title="Experience">
             <ac-role role-name="Solutions Engineer" location="Plano, TX" organization="Hoonuit" :start-date="hoonuitStartDate" :end-date="hoonuitEndDate">
                 <ac-role-item>
-                    Built the main engine of an app that won a company-wide hackathon
+                    Took initiative to design and build a tool to automate development testing of ETL's, saving more than 100 hours of development time in the first year of use
                 </ac-role-item>
                 <ac-role-item>
-                    Designed and built a CLI that facilitates generation of large amounts of realistic test data and automates running complex ETL workflows
+                    Won a company-wide hackathon by building the main engine of an app that reduced the time required to populate a customer dashboard from weeks to hours
                 </ac-role-item>
                 <ac-role-item>
                     Wrote multiple ETL’s to populate an enterprise data warehouse for education customers
