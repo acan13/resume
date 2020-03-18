@@ -109,7 +109,7 @@ export const techSummaryItems = [
         category: TECH_ITEM_CATEGORIES.TOOLS,
     }),
     new TechSummaryItem({
-        name: 'AWS Amplify',
+        name: 'Amplify',
         category: TECH_ITEM_CATEGORIES.AWS,
     }),
     new TechSummaryItem({

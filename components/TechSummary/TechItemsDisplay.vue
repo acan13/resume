@@ -5,10 +5,8 @@
                 {{ category.toUpperCase() }}
             </span>
             <transition-group name="list">
-                <span v-for="(item, index) in techItemsMap[category]" :key="item.name" class="list-item">
-                    {{ item.shortName }}<template v-if="index !== languageItems.length - 1">
-                        ,
-                    </template>
+                <span v-for="(item, index) in techItemsMap.get(category)" :key="item.name" class="list-item">
+                    {{ `${item.name}${index !== techItemsMap.get(category).length - 1 ? ',' : ''}` }}
                 </span>
             </transition-group>
         </div>
@@ -16,7 +14,7 @@
 </template>
 
 <script>
-import { TECH_ITEM_CATEGORIES } from '../../conventions';
+import { TECH_ITEM_CATEGORIES_SORT_ORDER } from '../../conventions';
 import { techSummaryItems } from './techSummaryItems';
 export default {
     props: {
@@ -27,34 +25,39 @@ export default {
     },
     data () {
         return {
+            categories: [],
             techSummaryItems,
         };
     },
     computed: {
-        sortedItems () {
-            const sortedItems = [...this.techSummaryItems];
-            return sortedItems.sort((a, b) => {
-                const nameA = a.shortName.toUpperCase();
-                const nameB = b.shortName.toUpperCase();
-                if (nameA > nameB) {
-                    return 1;
-                } else if (nameA < nameB) {
-                    return -1;
-                }
-                return 0;
-            });
-        },
-        filteredItems () {
-            return this.sortedItems.filter((item) => {
-                return this.selectedFilters.length === 0 || this.selectedFilters.includes(item.comfortLevel);
-            });
+        techItemsMap () {
+            const itemMap = new Map();
+            for (const category of this.categories) {
+                itemMap.set(category, []);
+            }
+            for (const item of this.techSummaryItems) {
+                itemMap.get(item.category).push(item);
+            }
+            for (const category of this.categories) {
+                itemMap.get(category).sort(this.sorter);
+            }
+            return itemMap;
         },
     },
     methods: {
-
+        sorter (a, b) {
+            const nameA = a.name.toUpperCase();
+            const nameB = b.name.toUpperCase();
+            if (nameA > nameB) {
+                return 1;
+            } else if (nameA < nameB) {
+                return -1;
+            }
+            return 0;
+        },
     },
     created () {
-        this.categories = Object.values(TECH_ITEM_CATEGORIES);
+        this.categories = TECH_ITEM_CATEGORIES_SORT_ORDER;
     },
 };
 </script>
