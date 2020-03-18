@@ -1,36 +1,12 @@
 <template>
     <div class="tech-items-display-wrapper">
-        <div class="tech-item-line">
+        <div v-for="category in categories" :key="category" class="tech-item-line">
             <span class="item-type-name">
-                LANGUAGES:
+                {{ category.toUpperCase() }}
             </span>
             <transition-group name="list">
-                <span v-for="(item, index) in languageItems" :key="item.longName" class="list-item">
+                <span v-for="(item, index) in techItemsMap[category]" :key="item.name" class="list-item">
                     {{ item.shortName }}<template v-if="index !== languageItems.length - 1">
-                        ,
-                    </template>
-                </span>
-            </transition-group>
-        </div>
-        <div class="tech-item-line">
-            <span class="item-type-name">
-                FRAMEWORKS:
-            </span>
-            <transition-group name="list">
-                <span v-for="(item, index) in frameworkItems" :key="item.longName" class="list-item">
-                    {{ item.shortName }}<template v-if="index !== frameworkItems.length - 1">
-                        ,
-                    </template>
-                </span>
-            </transition-group>
-        </div>
-        <div class="tech-item-line">
-            <span class="item-type-name">
-                WORLD LANGUAGES:
-            </span>
-            <transition-group name="list">
-                <span v-for="(item, index) in worldLanguageItems" :key="item.longName" class="list-item">
-                    {{ item.shortName }}<template v-if="index !== worldLanguageItems.length - 1">
                         ,
                     </template>
                 </span>
@@ -40,17 +16,19 @@
 </template>
 
 <script>
-import { TYPE } from './techSummaryItems';
+import { TECH_ITEM_CATEGORIES } from '../../conventions';
+import { techSummaryItems } from './techSummaryItems';
 export default {
     props: {
-        techSummaryItems: {
-            type: Array,
-            required: true,
-        },
         selectedFilters: {
             type: Array,
             default: () => { return []; },
         },
+    },
+    data () {
+        return {
+            techSummaryItems,
+        };
     },
     computed: {
         sortedItems () {
@@ -71,22 +49,12 @@ export default {
                 return this.selectedFilters.length === 0 || this.selectedFilters.includes(item.comfortLevel);
             });
         },
-        languageItems () {
-            return this.filterByType(TYPE.LANGUAGE);
-        },
-        frameworkItems () {
-            return this.filterByType(TYPE.FRAMEWORK);
-        },
-        worldLanguageItems () {
-            return this.filterByType(TYPE.WORLD_LANGUAGE);
-        },
     },
     methods: {
-        filterByType (type) {
-            return this.filteredItems.filter((item) => {
-                return item.type === type;
-            });
-        },
+
+    },
+    created () {
+        this.categories = Object.values(TECH_ITEM_CATEGORIES);
     },
 };
 </script>

@@ -14,7 +14,7 @@
 <script>
 import SectionVue from '../Shared/Section.vue';
 import TechItemsDisplayVue from './TechItemsDisplay.vue';
-import { techSummaryItems, COMFORT_LEVEL } from './techSummaryItems';
+import { techSummaryItems } from './techSummaryItems';
 import FilterBarVue from '~/components/Shared/FilterBar.vue';
 export default {
     components: {
@@ -29,7 +29,7 @@ export default {
     },
     created () {
         this.techSummaryItems = techSummaryItems;
-        this.filterOptions = Object.values(COMFORT_LEVEL);
+        this.filterOptions = [];
     },
 };
 </script>

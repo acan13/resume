@@ -1,95 +1,119 @@
-export const TYPE = {
-    LANGUAGE: 'Language',
-    FRAMEWORK: 'Framework',
-    // CONCEPT: 'Concept',
-    WORLD_LANGUAGE: 'World Language',
-};
-
-export const COMFORT_LEVEL = {
-    LIMITED_EXPERIENCE: 'Limited Experience',
-    WORKING_PROFICIENCY: 'Working Proficiency',
-    ADVANCED_PROFICIENCY: 'Advanced Proficiency',
-};
+import { TECH_ITEM_CATEGORIES } from '~/conventions';
 
 class TechSummaryItem {
     constructor ({
-        longName = '',
-        shortName = '',
-        comfortLevel = COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type = TYPE.FRAMEWORK,
+        name,
+        category,
     }) {
-        this.longName = longName;
-        this.shortName = shortName || longName;
-        this.comfortLevel = comfortLevel;
-        this.type = type;
+        this.name = name;
+        this.category = category;
     }
 }
 
 export const techSummaryItems = [
     new TechSummaryItem({
-        longName: 'JavaScript',
-        comfortLevel: COMFORT_LEVEL.ADVANCED_PROFICIENCY,
-        type: TYPE.LANGUAGE,
+        name: 'JavaScript',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
     }),
     new TechSummaryItem({
-        longName: 'Python',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.LANGUAGE,
+        name: 'Python',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
     }),
     new TechSummaryItem({
-        longName: 'SQL',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.LANGUAGE,
+        name: 'SQL',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
     }),
     new TechSummaryItem({
-        longName: 'HTML',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.LANGUAGE,
+        name: 'HTML',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
     }),
     new TechSummaryItem({
-        longName: 'CSS',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.LANGUAGE,
+        name: 'CSS',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
     }),
     new TechSummaryItem({
-        longName: 'SCSS',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.FRAMEWORK,
+        name: 'SCSS',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
     }),
     new TechSummaryItem({
-        longName: 'Bootstrap',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.FRAMEWORK,
+        name: 'Bootstrap',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
     }),
     new TechSummaryItem({
-        longName: 'Express.js',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.FRAMEWORK,
+        name: 'Express.js',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
     }),
     new TechSummaryItem({
-        longName: 'Vue.js',
-        comfortLevel: COMFORT_LEVEL.ADVANCED_PROFICIENCY,
-        type: TYPE.FRAMEWORK,
+        name: 'Vue.js',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
     }),
     new TechSummaryItem({
-        longName: 'Node.js',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.FRAMEWORK,
+        name: 'Node.js',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
     }),
     new TechSummaryItem({
-        longName: 'Django',
-        comfortLevel: COMFORT_LEVEL.LIMITED_EXPERIENCE,
-        type: TYPE.FRAMEWORK,
+        name: 'Django',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
     }),
     new TechSummaryItem({
-        longName: 'Brazilian Portuguese',
+        name: 'Brazilian Portuguese',
         shortName: 'Portuguese',
-        comfortLevel: COMFORT_LEVEL.ADVANCED_PROFICIENCY,
-        type: TYPE.WORLD_LANGUAGE,
+        category: TECH_ITEM_CATEGORIES.WORLD_LANGUAGES,
     }),
     new TechSummaryItem({
-        longName: 'Nuxt.js',
-        comfortLevel: COMFORT_LEVEL.WORKING_PROFICIENCY,
-        type: TYPE.FRAMEWORK,
+        name: 'VS Code',
+        category: TECH_ITEM_CATEGORIES.TOOLS,
+    }),
+    new TechSummaryItem({
+        name: 'MongoDB',
+        category: TECH_ITEM_CATEGORIES.DATABASES,
+    }),
+    new TechSummaryItem({
+        name: 'MSSQL',
+        category: TECH_ITEM_CATEGORIES.DATABASES,
+    }),
+    new TechSummaryItem({
+        name: 'PostgreSQL',
+        category: TECH_ITEM_CATEGORIES.DATABASES,
+    }),
+    new TechSummaryItem({
+        name: 'S3',
+        category: TECH_ITEM_CATEGORIES.AWS,
+    }),
+    new TechSummaryItem({
+        name: 'Cloudfront',
+        category: TECH_ITEM_CATEGORIES.AWS,
+    }),
+    new TechSummaryItem({
+        name: 'Route 53',
+        category: TECH_ITEM_CATEGORIES.AWS,
+    }),
+    new TechSummaryItem({
+        name: 'EC2',
+        category: TECH_ITEM_CATEGORIES.AWS,
+    }),
+    new TechSummaryItem({
+        name: 'Git',
+        category: TECH_ITEM_CATEGORIES.TOOLS,
+    }),
+    new TechSummaryItem({
+        name: 'SQL Server Management Studio',
+        category: TECH_ITEM_CATEGORIES.TOOLS,
+    }),
+    new TechSummaryItem({
+        name: 'Slack',
+        category: TECH_ITEM_CATEGORIES.TOOLS,
+    }),
+    new TechSummaryItem({
+        name: 'IntelliJ',
+        category: TECH_ITEM_CATEGORIES.TOOLS,
+    }),
+    new TechSummaryItem({
+        name: 'AWS Amplify',
+        category: TECH_ITEM_CATEGORIES.AWS,
+    }),
+    new TechSummaryItem({
+        name: 'MySQL',
+        category: TECH_ITEM_CATEGORIES.DATABASES,
     }),
 ];

@@ -29,6 +29,11 @@ import ExperienceVue from '~/components/Experience/Experience.vue';
 import LeadershipServiceVue from '~/components/LeadershipService/LeadershipService.vue';
 import PersonalSummaryVue from '~/components/PersonalSummary/PersonalSummary.vue';
 export default {
+    head () {
+        return {
+            title: "Allan Cannon's Resume",
+        };
+    },
     components: {
         'ac-header': HeaderVue,
         'ac-tech-summary': TechnicalSummaryVue,
