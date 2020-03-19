@@ -116,4 +116,12 @@ export const techSummaryItems = [
         name: 'MySQL',
         category: TECH_ITEM_CATEGORIES.DATABASES,
     }),
+    new TechSummaryItem({
+        name: 'CodeBuild',
+        category: TECH_ITEM_CATEGORIES.AWS,
+    }),
+    new TechSummaryItem({
+        name: 'CodePipeline',
+        category: TECH_ITEM_CATEGORIES.AWS,
+    }),
 ];
