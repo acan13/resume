@@ -25,10 +25,12 @@ phases:
     # finally:
     #   - command
     #   - command
-  # post_build:
-  #   commands:
-  #     - command
-  #     - command
+  post_build:
+    commands:
+      - pwd
+      - ls
+      - cd dist
+      - ls
   #   finally:
   #     - command
   #     - command
