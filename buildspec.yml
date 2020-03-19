@@ -42,7 +42,7 @@ phases:
 #     file-format: JunitXml | CucumberJson | VisualStudioTrx | TestNGXml
 artifacts:
   files:
-    - dist/*
+    - dist/**/*
 #     - location
 #   name: artifact-name
 #   discard-paths: yes
