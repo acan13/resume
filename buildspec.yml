@@ -28,7 +28,7 @@ phases:
   # post_build:
   #   commands:
   #     - pwd
-  #     - ls
+      - ls
   #     - cd dist
   #   finally:
   #     - command
