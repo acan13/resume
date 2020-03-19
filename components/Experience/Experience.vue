@@ -14,13 +14,16 @@
             </ac-role>
             <ac-role role-name="UI/UX Developer" location="Plano, TX" organization="Mizuni" :start-date="mizuniStartDate" :end-date="mizuniEndDate">
                 <ac-role-item>
-                    Implemented a knowledge base and built a tool to seamlessly integrate context-based content into a web app
+                    Planned and executed a complete rebuild of the main company <a href="https://web.archive.org/web/20190118031700/https://www.mizuni.com/">marketing website</a> from scratch
                 </ac-role-item>
                 <ac-role-item>
-                    Planned and executed complete rebuild of main company marketing website from scratch
+                    Created a knowledge base integration widget to provide context-based help and interactive tours of live page content
                 </ac-role-item>
                 <ac-role-item>
-                    Created and built multiple front-end apps using JavaScript, Vue, and Webpack
+                    Built a tool to automatically identify and mask sensitive data from being displayed inadvertantly during demonstrations
+                </ac-role-item>
+                <ac-role-item>
+                    Worked on front-end apps in all stages of the product lifecycle including creation, tooling, back-end integration, state management, legacy support, and testing
                 </ac-role-item>
             </ac-role>
             <ac-role role-name="Sales Engineer" location="Plano, TX" organization="Keyence Corporation of America" :start-date="keyenceStartDate" :end-date="keyenceEndDate">
@@ -34,7 +37,7 @@
                     Won multiple awards, including best rookie, skills champion, and sales monster
                 </ac-role-item>
                 <ac-role-item>
-                    Developed strong communication skills through 600+ sales calls and 200+ hours on the phone
+                    Developed strong communication skills through 500+ sales calls and 200+ hours on the phone
                 </ac-role-item>
             </ac-role>
         </ac-section>
