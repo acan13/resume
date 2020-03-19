@@ -28,6 +28,7 @@ phases:
   post_build:
     commands:
       - aws s3 rm --recursive "s3://allan-cannon-resume/"
+      - aws s3 sync --delete . "s3://allan-cannon-resume"
   #     - ls
   #     - cd dist
   #   finally:
