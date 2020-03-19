@@ -124,4 +124,12 @@ export const techSummaryItems = [
         name: 'CodePipeline',
         category: TECH_ITEM_CATEGORIES.AWS,
     }),
+    new TechSummaryItem({
+        name: 'Nuxt.js',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
+    }),
+    new TechSummaryItem({
+        name: 'Vuex',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
+    }),
 ];
