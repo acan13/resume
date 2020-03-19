@@ -25,9 +25,9 @@ phases:
     # finally:
     #   - command
     #   - command
-  # post_build:
-  #   commands:
-  #     - pwd
+  post_build:
+    commands:
+      - aws s3 rm --recursive "s3://${DEPLOYMENT_BUCKET}/"
   #     - ls
   #     - cd dist
   #   finally:
