@@ -27,7 +27,7 @@ phases:
     #   - command
   post_build:
     commands:
-      - aws s3 rm --recursive "s3://${DEPLOYMENT_BUCKET}/"
+      - aws s3 rm --recursive "s3://allan-cannon-resume/"
   #     - ls
   #     - cd dist
   #   finally:
