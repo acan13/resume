@@ -1,6 +1,6 @@
 <template>
     <div class="tech-summary-wrapper">
-        <ac-section section-title="Tech Summary">
+        <ac-section section-title="Tech Experience Summary">
             <div class="tech-summary-items-display">
                 <ac-tech-items-display :tech-summary-items="techSummaryItems" :selected-filters="selectedFilters"/>
             </div>

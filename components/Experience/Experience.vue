@@ -9,6 +9,9 @@
                     Won a company-wide hackathon by building the main engine of an app that reduced the time required to populate a customer dashboard from weeks to hours
                 </ac-role-item>
                 <ac-role-item>
+                    Reduced the ETL execution time of the main company product by 50%
+                </ac-role-item>
+                <ac-role-item>
                     Wrote multiple ETL’s to populate an enterprise data warehouse for education customers
                 </ac-role-item>
             </ac-role>

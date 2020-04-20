@@ -1,7 +1,13 @@
 <template>
     <div class="role-info-wrapper">
         <div class="role-info role-info-header-line">
-            <ac-role-name :role-name="roleName"/>
+            <div class="role-name-group">
+                <ac-role-name :role-name="roleName"/>
+                <div v-if="roleName && website" class="role-name-group-divider">
+                    -
+                </div>
+                <a v-if="website" :href="website">{{ website }}</a>
+            </div>
             <ac-role-dates :start-date="startDate" :end-date="endDate"/>
         </div>
         <div class="organization-info role-info-header-line">
@@ -44,6 +50,10 @@ export default {
             type: String,
             default: '',
         },
+        website: {
+            type: String,
+            default: '',
+        },
     },
 };
 </script>
@@ -52,5 +62,15 @@ export default {
     .role-info-header-line {
         display: flex;
         justify-content: space-between;
+    }
+
+    .role-name-group {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .role-name-group-divider {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 </style>

@@ -12,6 +12,9 @@
         <div class="experience-summary">
             <ac-experience/>
         </div>
+        <div class="projects-summary">
+            <ac-projects/>
+        </div>
         <div class="education-summary">
             <ac-education/>
         </div>
@@ -28,6 +31,7 @@ import EducationVue from '~/components/Education/Education.vue';
 import ExperienceVue from '~/components/Experience/Experience.vue';
 import LeadershipServiceVue from '~/components/LeadershipService/LeadershipService.vue';
 import PersonalSummaryVue from '~/components/PersonalSummary/PersonalSummary.vue';
+import ProjectsVue from '~/components/Projects/Projects.vue';
 export default {
     head () {
         return {
@@ -41,6 +45,7 @@ export default {
         'ac-experience': ExperienceVue,
         'ac-leadership-service': LeadershipServiceVue,
         'ac-personal-summary': PersonalSummaryVue,
+        'ac-projects': ProjectsVue,
     },
 };
 </script>

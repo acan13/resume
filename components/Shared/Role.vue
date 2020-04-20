@@ -1,7 +1,13 @@
 <template>
     <div class="role-wrapper">
         <div class="role-header">
-            <ac-role-info :role-name="roleName" :location="location" :start-date="startDate" :end-date="endDate" :organization="organization"/>
+            <ac-role-info
+                :role-name="roleName"
+                :location="location"
+                :start-date="startDate"
+                :end-date="endDate"
+                :organization="organization"
+                :website="website"/>
         </div>
         <ul class="role-items">
             <slot/>
@@ -33,9 +39,13 @@ export default {
         },
         endDate: {
             type: Date,
-            default: undefined, // put today for 'present'
+            default: undefined, // put new Date() for 'present'
         },
         organization: {
+            type: String,
+            default: '',
+        },
+        website: {
             type: String,
             default: '',
         },
