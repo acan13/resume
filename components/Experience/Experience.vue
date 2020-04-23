@@ -23,7 +23,7 @@
                     Created a knowledge base integration widget to provide context-based help and interactive tours of live page content
                 </ac-role-item>
                 <ac-role-item>
-                    Built a tool to automatically identify and mask sensitive data from being displayed inadvertantly during demonstrations
+                    Built a tool to automatically identify and mask sensitive data from being displayed inadvertently during demonstrations
                 </ac-role-item>
                 <ac-role-item>
                     Worked on front-end apps in all stages of the product lifecycle including creation, tooling, back-end integration, state management, legacy support, and testing
