@@ -15,7 +15,7 @@
                     Wrote multiple ETL’s to populate an enterprise data warehouse for education customers
                 </ac-role-item>
             </ac-role>
-            <ac-role role-name="UI/UX Developer" location="Plano, TX" organization="Mizuni" :start-date="mizuniStartDate" :end-date="mizuniEndDate">
+            <ac-role role-name="UI/UX Developer" location="Plano, TX" organization="Mizuni (Acquired by Hoonuit)" :start-date="mizuniStartDate" :end-date="mizuniEndDate">
                 <ac-role-item>
                     Planned and executed a complete rebuild of the main company <a href="https://web.archive.org/web/20190118031700/https://www.mizuni.com/">marketing website</a> from scratch
                 </ac-role-item>
