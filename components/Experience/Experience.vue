@@ -1,6 +1,11 @@
 <template>
     <div class="experience-wrapper">
         <ac-section section-title="Experience">
+            <ac-role role-name="Software Engineer" location="Plano, TX" organization="Google" :start-date="googleStartDate" :end-date="googleEndDate">
+                <!-- <ac-role-item>
+                    Primary engineer responsible for front-end of 
+                </ac-role-item> -->
+            </ac-role>
             <ac-role role-name="Solutions Engineer" location="Plano, TX" organization="Hoonuit" :start-date="hoonuitStartDate" :end-date="hoonuitEndDate">
                 <ac-role-item>
                     Took initiative to design and build a tool to automate development testing of ETL's, saving more than 100 hours of development time in the first year of use
@@ -61,8 +66,10 @@ export default {
 
     },
     created () {
+        this.googleStartDate = new Date(2020, 8);
+        this.googleEndDate = new Date();
         this.hoonuitStartDate = new Date(2019, 3);
-        this.hoonuitEndDate = new Date();
+        this.hoonuitEndDate = new Date(2020, 8);
         this.mizuniStartDate = new Date(2018, 1);
         this.mizuniEndDate = new Date(2019, 3);
         this.keyenceStartDate = new Date(2015, 6);
