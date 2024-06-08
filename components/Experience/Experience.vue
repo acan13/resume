@@ -2,9 +2,15 @@
     <div class="experience-wrapper">
         <ac-section section-title="Experience">
             <ac-role role-name="Software Engineer" location="Plano, TX" organization="Google" :start-date="googleStartDate" :end-date="googleEndDate">
-                <!-- <ac-role-item>
-                    Primary engineer responsible for front-end of 
-                </ac-role-item> -->
+                <ac-role-item>
+                    Built and maintained a Kotlin server scaled to support all of Google
+                </ac-role-item>
+                <ac-role-item>
+                    Contributed to both front-end and back-end of an app responsible for controlling access to thousands of sensitive systems
+                </ac-role-item>
+                <ac-role-item>
+                    Earned language readability status in Dart, Kotlin, and API design
+                </ac-role-item>
             </ac-role>
             <ac-role role-name="Solutions Engineer" location="Plano, TX" organization="Hoonuit" :start-date="hoonuitStartDate" :end-date="hoonuitEndDate">
                 <ac-role-item>

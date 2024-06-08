@@ -132,4 +132,20 @@ export const techSummaryItems = [
         name: 'Vuex',
         category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
     }),
+    new TechSummaryItem({
+        name: 'Angular',
+        category: TECH_ITEM_CATEGORIES.FRAMEWORKS,
+    }),
+    new TechSummaryItem({
+        name: 'Dart',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
+    }),
+    new TechSummaryItem({
+        name: 'Kotlin',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
+    }),
+    new TechSummaryItem({
+        name: 'Typescript',
+        category: TECH_ITEM_CATEGORIES.LANGUAGES,
+    }),
 ];
