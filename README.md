@@ -1,22 +1,22 @@
 # resume
 
-> Allan Cannon&#39;s Digital Resume
+Allan Cannon's resume, served at https://www.allancannon.com.
 
-## Build Setup
+Plain static HTML and CSS in `site/`. There is no build step.
 
-``` bash
-# install dependencies
-$ npm install
+## Preview locally
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+```bash
+python3 -m http.server -d site 8000
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Then open http://localhost:8000.
+
+## Deploy
+
+The site is hosted from the `allan-cannon-resume` S3 bucket behind CloudFront.
+
+```bash
+aws s3 sync site/ s3://allan-cannon-resume --delete
+aws cloudfront create-invalidation --distribution-id <DISTRIBUTION_ID> --paths "/*"
+```
